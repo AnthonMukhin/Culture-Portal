@@ -1,8 +1,8 @@
 import React from "react";
-
 import Helmet from 'react-helmet';
 
 import styles from './layout.module.css';
+import MainNavigation from '../../components/main-navigation/main-navigation';
 
 export default ({ children }) => {
 
@@ -13,6 +13,7 @@ export default ({ children }) => {
       </Helmet>
       <header>
         <h2>Писатели Беларуси</h2>
+        <MainNavigation></MainNavigation>
         <hr></hr>
       </header>
       <main className={styles.main}>
