@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from "gatsby";
 import { useTranslation } from 'react-i18next';
 
-export default () => {
-
+export default (props) => {
+const authorsArray = props.authorsArray;
   const { t } = useTranslation('main-navigation');
 
   return (
@@ -12,7 +12,7 @@ export default () => {
         <Link to="/">{t('main')}</Link>
       </li>
       <li>
-        <Link to="/writers">{t('writers')}</Link>
+        <Link state={authorsArray} to="/writers">{t('writers')}</Link>
       </li>
     </ul>
   );

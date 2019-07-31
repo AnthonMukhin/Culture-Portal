@@ -6,10 +6,10 @@ import '../../utils/i18next';
 import styles from './layout.module.css';
 import MainNavigation from '../../components/main-navigation/main-navigation';
 import LanguageSelector from '../../components/language-selector/language-selector';
-export default ({ children }) => {
 
+export default (props) => {
+const authorsArray = props.authorsArray;
   const { t } = useTranslation('layout');
-
   return (
     <>
       <Helmet>
@@ -18,11 +18,11 @@ export default ({ children }) => {
       <header>
         <h2>{t('title')}</h2>
         <LanguageSelector></LanguageSelector>
-        <MainNavigation></MainNavigation>
+        <MainNavigation authorsArray={authorsArray}></MainNavigation>
         <hr></hr>
       </header>
       <main className={styles.main}>
-        {children}
+        {props.children}
       </main>
       <footer>
         <hr></hr>
@@ -31,6 +31,3 @@ export default ({ children }) => {
     </>
   );
 }
-  
-  
-  
