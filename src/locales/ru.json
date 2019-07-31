@@ -5,5 +5,9 @@
   "main-navigation": {
     "main": "Главная",
     "writers": "Писатели"
+  },
+  "video": {
+    "watch": "Смотреть видео",
+    "close": "Закрыть"
   }
 }

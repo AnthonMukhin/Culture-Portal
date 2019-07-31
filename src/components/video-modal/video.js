@@ -1,29 +1,21 @@
 import React, { useState } from "react";
 import ReactDOM from 'react-dom';
+import { useTranslation } from 'react-i18next';
+import '../../utils/i18next';
 
 import './videoModal.css';
 
-// export default class Video extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <button onClick={this.props.onClose}>закрыть</button>
-//         {this.props.children}
-//       </div>
-//     )
-//   }
-// }
-
 export default (videoLink) => {
   const [isVideo, setVideoStatus] = useState(false);
+  const { t } = useTranslation('video');
   return (
     <div>
-    <button onClick={() => setVideoStatus(!isVideo)}>Посмотреть видео</button>
+    <button onClick={() => setVideoStatus(!isVideo)}>{t('watch')}</button>
     {isVideo &&
       ReactDOM.createPortal(
         <div>
           <div>
-          <button onClick={() => setVideoStatus(!isVideo)}>закрыть</button>
+          <button onClick={() => setVideoStatus(!isVideo)}>{t('close')}</button>
           <iframe
             title="writer-video"
             width="100%"
