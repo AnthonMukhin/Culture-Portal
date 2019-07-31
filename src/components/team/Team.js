@@ -1,4 +1,5 @@
 import React from "react";
+import uniqid from 'uniqid';
 
 import './team.css';
 
@@ -8,25 +9,23 @@ export default class Team extends React.Component {
   const currentLanguage = this.props.lang;
 
   return (
-    <section className="team-container">
-      {dataTeam.map((item, index) => (
+    <section  className="team-container">
+      {dataTeam.map((item) => (
         <>
         <div
-         key = {index}
+        key = {uniqid()}
         className="team-item"
         >
         <img
         className="team-image"
-        key = {index+"2"}
         src = {item.photoLink}
         alt={JSON.stringify(item.name[currentLanguage])}>
         </img>
-        <p key = {index+"3"}>{item.name[currentLanguage]}</p>
+        <p>{item.name[currentLanguage]}</p>
         <a
-        key = {index+"5"}
         href={item.githubLink}>
         gitHub</a>
-        <p key = {index+"6"}>
+        <p>
         {item.contribution[currentLanguage]}
         </p>
         </div>
