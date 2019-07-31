@@ -9,7 +9,6 @@ import LanguageSelector from '../../components/language-selector/language-select
 export default ({ children }) => {
 
   const { t } = useTranslation('layout');
-
   return (
     <>
       <Helmet>
@@ -31,6 +30,5 @@ export default ({ children }) => {
     </>
   );
 }
-  
-  
-  
+
+
