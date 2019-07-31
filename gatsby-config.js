@@ -8,5 +8,12 @@ module.exports = {
         accessToken: `HXg2kVNAan9V3JBJz-K7juG0Bb6T0Rcytrotl_QbTQ8`,
       },
     },
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'portal',
+        id: 'portal',
+      },
+    }
   ]
 }
