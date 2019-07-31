@@ -1,13 +1,14 @@
 import React from "react";
-import "../../styles/bootstrap.min.css"
+
 import './team.css';
 
 export default class Team extends React.Component {
   render() {
   const dataTeam = this.props.data;
+  const currentLanguage = this.props.lang;
+
   return (
     <section className="team-container">
-
       {dataTeam.map((item, index) => (
         <>
         <div
@@ -18,15 +19,15 @@ export default class Team extends React.Component {
         className="team-image"
         key = {index+"2"}
         src = {item.photoLink}
-        alt={JSON.stringify(item.name.ru)}>
+        alt={JSON.stringify(item.name[currentLanguage])}>
         </img>
-        <p key = {index+"3"}>{item.name.ru}</p>
+        <p key = {index+"3"}>{item.name[currentLanguage]}</p>
         <a
         key = {index+"5"}
         href={item.githubLink}>
         gitHub</a>
         <p key = {index+"6"}>
-        {item.contribution.ru}
+        {item.contribution[currentLanguage]}
         </p>
         </div>
         </>
@@ -34,6 +35,6 @@ export default class Team extends React.Component {
       }
 
     </section>
-  )
-}
+    )
+  }
 }
