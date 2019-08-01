@@ -3,14 +3,14 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 export default class Carousel extends React.Component {
-  items = [1, 2, 3, 4, 5];
-
   state = {
     currentIndex: 0,
     pictures: []
   };
 
-  slideTo = i => this.setState({ currentIndex: i });
+  slideTo = i => {
+    return this.setState({ currentIndex: i });
+  };
 
   onSlideChanged = e => this.setState({ currentIndex: e.item });
 
@@ -21,8 +21,15 @@ export default class Carousel extends React.Component {
     this.setState({ currentIndex: this.state.currentIndex - 1 });
 
   thumbItem = (item, i) => {
-    return <img src={item.key} class="gallery-item" alt="" onClick={() => this.slideTo(i)} />;
-  }
+    return (
+      <img
+        src={item.key}
+        class="gallery-item"
+        alt=""
+        onClick={() => this.slideTo(i)}
+      />
+    );
+  };
 
   componentDidMount() {
     const data = Array(7)
@@ -43,7 +50,7 @@ export default class Carousel extends React.Component {
           alt=""
           key={picture}
           src={picture}
-          class="carousel-item"
+          style={{ width: "100%" }}
           onDragStart={handleOnDragStart}
         />
       );
@@ -59,10 +66,12 @@ export default class Carousel extends React.Component {
           slideToIndex={currentIndex}
           onSlideChanged={this.onSlideChanged}
           mouseDragEnabled
-        duration={400}
+          duration={400}
         />
 
-        <ul class="gallery-items">{this.state.pictures.map(this.thumbItem)}</ul>
+        <div class="gallery-items">
+          {this.state.pictures.map(this.thumbItem)}
+        </div>
       </div>
     );
   }
