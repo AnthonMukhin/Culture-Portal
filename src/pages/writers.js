@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import '../utils/i18next';
+import { Link } from "gatsby";
 
 import Layout from "../components/layout/layout";
 
@@ -17,6 +18,7 @@ export default ({location}) => {
   const searchWriter = (input) => {
     const value = input.target.value.toLowerCase();
     if (value === '') setWritersList(allAuthors);
+    // eslint-disable-next-line
     const filtredAuthors = allAuthors.filter((author) => {
       if (author.name[currentLang].toLowerCase().indexOf(value) > -1) return author;
       if (author.placeOfBirth[currentLang].toLowerCase().indexOf(value) > -1) return author;
@@ -27,7 +29,11 @@ export default ({location}) => {
   const writersForPage = writersList.map((author) => {
     return (
       <li key={author.id}>
-        <h3>{author.name[currentLang]}</h3>
+        <Link
+          to="/writer"
+          state={author}>
+            <h3>{author.name[currentLang]}</h3>
+        </Link>
       </li>
     )
   });
@@ -37,7 +43,6 @@ export default ({location}) => {
       <input
         size="43"
         type="text"
-        className="form-control"
         placeholder={t('searchPlaceholder')}
         onChange={searchWriter}
       />

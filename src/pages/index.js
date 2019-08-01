@@ -4,9 +4,9 @@ import Layout from "../components/layout/layout";
 
 export default (query) => {
   const authorsArray = query.data.allContentfulAuthor.nodes;
-  const teamArray = query.data.allContentfulTeam.nodes;
+  // const teamArray = query.data.allContentfulTeam.nodes;
   console.log(authorsArray);
-  console.log(teamArray);
+  // console.log(teamArray);
   return (
     <Layout authorsArray={authorsArray}></Layout>
   );
@@ -67,23 +67,6 @@ query MyQuery {
       placeOfActivity {
         lat
         lon
-      }
-    }
-  }
-  allContentfulTeam {
-    nodes {
-      id
-      name {
-        by
-        en
-        ru
-      }
-      photoLink
-      githubLink
-      contribution {
-        by
-        en
-        ru
       }
     }
   }
