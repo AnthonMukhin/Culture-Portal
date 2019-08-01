@@ -5,15 +5,22 @@ import '../../utils/i18next';
 import '../../styles/bootstrap.min.css'
 import './description.css';
 
-export default ({children}) => {
+export default (writer) => {
+
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
+
+  console.log(writer.name, 'writer');
   return (
-    <div className='btn-group m-0 col-4 align-items-center'>
-      <div className="">
-        <img src="" className="author-photo"></img>
-      </div>
-      <div className="author-description">
-        <h3>{author.name}</h3>
-        <p>{author.summury}</p>
+    <div className="container">
+      <div className='btn-group col-12 align-items-center row'>
+        <div className="author-photo-container col-4">
+          <img src={writer.avatar.file.url} className="author-photo" alt="" />
+        </div>
+        <div className="author-description col-8">
+          <h3>{writer.name[currentLang]}</h3>
+          <p>{writer.summary[currentLang]}</p>
+        </div>
       </div>
     </div>
   );
