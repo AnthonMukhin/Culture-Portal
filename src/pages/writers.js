@@ -1,18 +1,30 @@
 import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
+import '../utils/i18next';
 
 import Layout from "../components/layout/layout";
 
 export default ({location}) => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
+  const { t } = useTranslation('writers');
 
-  // const [writersList, setWritersList] = useState(0);
-  const authorsArray = location.state[0];
+  const allAuthors = location.state[0];
+  const [writersList, setWritersList] = useState(allAuthors);
   console.log('from WRITERS:');
-  console.log(authorsArray);
+  console.log(allAuthors);
 
-  const writersList = authorsArray.map((author) => {
+  const searchWriter = (input) => {
+    const value = input.target.value.toLowerCase();
+    if (value === '') setWritersList(allAuthors);
+    const filtredAuthors = allAuthors.filter((author) => {
+      if (author.name[currentLang].toLowerCase().indexOf(value) > -1) return author;
+      if (author.placeOfBirth[currentLang].toLowerCase().indexOf(value) > -1) return author;
+    });
+    setWritersList(filtredAuthors);
+  }
+
+  const writersForPage = writersList.map((author) => {
     return (
       <li key={author.id}>
         <h3>{author.name[currentLang]}</h3>
@@ -23,14 +35,14 @@ export default ({location}) => {
     <Layout>
       <div className="searchbar form-group">
       <input
-        // value={term}
+        size="43"
         type="text"
         className="form-control"
-        placeholder="Search writer by name or palce of birth..."
-        // onChange={dataSearch}
+        placeholder={t('searchPlaceholder')}
+        onChange={searchWriter}
       />
     </div>
-      <ul>{writersList}</ul>
+      <ul>{writersForPage}</ul>
     </Layout>
   );
 };

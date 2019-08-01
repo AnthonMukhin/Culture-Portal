@@ -9,5 +9,8 @@
   "video": {
     "watch": "Watch the video",
     "close": "Close"
+  },
+  "writers": {
+    "searchPlaceholder": "Search by writers name or palce of birth..."
   }
 }
