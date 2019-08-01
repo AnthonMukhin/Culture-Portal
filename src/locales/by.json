@@ -5,5 +5,8 @@
   "main-navigation": {
     "main": "Галоўная",
     "writers": "Пісьменнікі"
+  },
+  "map": {
+    "title": ""
   }
 }
