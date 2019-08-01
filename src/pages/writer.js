@@ -1,14 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout/layout";
-import Gallery from '../components/gallery/gallery';
+import Layout from '../components/layout/layout';
+import video from './../components/video-modal/video';
+import '../utils/i18next';
 
-import '../components/gallery/gallery.css';
-
-export default () => {
+export default ({location}) => {
+  const writer = location.state;
+  console.log('ONE WRITER:');
+  console.log(writer);
   return (
     <Layout>
-      <Gallery></Gallery>
+      {video(writer.videoLink)}
     </Layout>
   );
 };

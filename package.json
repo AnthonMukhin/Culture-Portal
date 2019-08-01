@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "gatsby": "2.13.39",
+    "gatsby": "^2.13.39",
+    "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-source-contentful": "2.1.15",
     "i18next": "^17.0.7",
