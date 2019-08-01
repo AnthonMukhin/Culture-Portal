@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.alice-carousel {
+  width: 80%;
+}
+
 .alice-carousel__stage-item {
   padding-left: 10px;
   padding-right: 10px;
@@ -11,6 +15,10 @@
 
 .alice-carousel__next-btn {
   text-align: left;
+}
+
+.carousel-item {
+  width: 100%;
 }
 
 .gallery-item {

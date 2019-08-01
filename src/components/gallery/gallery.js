@@ -43,7 +43,7 @@ export default class Carousel extends React.Component {
           alt=""
           key={picture}
           src={picture}
-          style={{ width: "100%" }}
+          class="carousel-item"
           onDragStart={handleOnDragStart}
         />
       );
