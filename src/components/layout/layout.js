@@ -3,7 +3,10 @@ import Helmet from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import '../../utils/i18next';
 
-import styles from './layout.module.css';
+import '../../styles/reset.css';
+import '../../styles/main.css';
+import './layout.css';
+import '../../styles/bootstrap.min.css'
 import MainNavigation from '../../components/main-navigation/main-navigation';
 import LanguageSelector from '../../components/language-selector/language-selector';
 export default ({ children }) => {
@@ -15,22 +18,19 @@ export default ({ children }) => {
       <Helmet>
         <title>Писатели</title>
       </Helmet>
-      <header>
-        <h2>{t('title')}</h2>
-        <LanguageSelector></LanguageSelector>
+      <header className='row justify-content-around align-items-center p-0'>
+        <h1 className='col-3'>{t('title')}</h1>
         <MainNavigation></MainNavigation>
-        <hr></hr>
+        <LanguageSelector></LanguageSelector>
       </header>
-      <main className={styles.main}>
+      <main>
         {children}
       </main>
       <footer>
-        <hr></hr>
         <p>© Awesome-random-party 2019</p>
       </footer>
     </>
   );
 }
-  
-  
-  
+
+

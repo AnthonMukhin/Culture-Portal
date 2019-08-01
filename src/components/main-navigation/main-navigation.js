@@ -7,13 +7,9 @@ export default () => {
   const { t } = useTranslation('main-navigation');
 
   return (
-    <ul>
-      <li>
-        <Link to="/">{t('main')}</Link>
-      </li>
-      <li>
-        <Link to="/writers">{t('writers')}</Link>
-      </li>
-    </ul>
+    <div className='btn-group m-0 col-4 align-items-center'>
+      <Link to="/" className='btn btn-outline-info' activeClassName="btn btn-info" style={{ color: 'white', fontWeight: 'bold' }}>{t('main')}</Link>
+      <Link to="/writers" className='btn btn-outline-info' activeClassName="btn btn-info" style={{ color: 'white', fontWeight: 'bold' }}>{t('writers')}</Link>
+    </div>
   );
 }
