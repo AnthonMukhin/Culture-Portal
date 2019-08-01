@@ -84,8 +84,8 @@ export default ({children}) => {
       </Helmet>
       <header className='row justify-content-around align-items-center p-0'>
         <h1 className='col-3'>{t('title')}</h1>
-        <LanguageSelector></LanguageSelector>
         <MainNavigation authorsArray={authorsArray}></MainNavigation>
+        <LanguageSelector></LanguageSelector>
       </header>
       <main>
         {children}
