@@ -14,6 +14,9 @@ export default () => {
       <li>
         <Link to="/writers">{t('writers')}</Link>
       </li>
+      <li>
+        <Link to="/writer">{t('writer')}</Link>
+      </li>
     </ul>
   );
 }
