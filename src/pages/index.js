@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from 'gatsby';
 
 import Layout from "../components/layout/layout";
 
@@ -27,6 +28,23 @@ query MyQuery {
         ru
       }
       name {
+        by
+        en
+        ru
+      }
+    }
+  }
+  allContentfulTeam {
+    nodes {
+      githubLink
+      id
+      photoLink
+      name {
+        by
+        en
+        ru
+      }
+      contribution {
         by
         en
         ru
