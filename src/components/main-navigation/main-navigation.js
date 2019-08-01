@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { useTranslation } from 'react-i18next';
 
 export default (props) => {
-const authorsArray = props.authorsArray;
+  const authorsArray = props.authorsArray;
   const { t } = useTranslation('main-navigation');
 
   return (
@@ -12,7 +12,7 @@ const authorsArray = props.authorsArray;
         <Link to="/">{t('main')}</Link>
       </li>
       <li>
-        <Link state={authorsArray} to="/writers">{t('writers')}</Link>
+        <Link state={[authorsArray]} to="/writers">{t('writers')}</Link>
       </li>
     </ul>
   );

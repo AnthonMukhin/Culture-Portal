@@ -1,8 +1,6 @@
 import React from 'react';
-// import ReactDOM from 'react-dom'
 
 import Layout from '../components/layout/layout';
-// import videoButton from '../components/video-modal/video';
 import video from './../components/video-modal/video';
 import { useTranslation } from 'react-i18next';
 import '../utils/i18next';
