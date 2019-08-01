@@ -5,5 +5,12 @@
   "main-navigation": {
     "main": "Галоўная",
     "writers": "Пісьменнікі"
+  },
+  "video": {
+    "watch": "Глядзець видэа",
+    "close": "Зачыніць"
+  },
+  "writers": {
+    "searchPlaceholder": "Пошук па імя аўтара або месцы нараджэння..."
   }
 }
