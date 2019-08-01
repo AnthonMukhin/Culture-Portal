@@ -3,10 +3,12 @@ import { graphql } from 'gatsby';
 
 import Layout from "../components/layout/layout";
 
-export default ({data}) => {
+export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
-  console.log("from index :");
+  const teamUnit = data.allContentfulTeam.nodes;
+  console.log('fron INDEX.JS:');
   console.log(authorsArraySummary);
+  console.log(teamUnit);
   return (
     <Layout></Layout>
   );
@@ -15,40 +17,40 @@ export default ({data}) => {
 export const query = graphql`
 query MyQuery {
   allContentfulAuthor {
-    totalCount
     nodes {
-      avatar {
-        file {
-          url
-        }
+      id
+      name {
+        by
+        en
+        ru
       }
       summary {
         by
         en
         ru
       }
-      name {
-        by
-        en
-        ru
+      avatar {
+        file {
+          url
+        }
       }
     }
   }
   allContentfulTeam {
     nodes {
-      githubLink
-      id
-      photoLink
-      name {
-        by
-        en
-        ru
-      }
       contribution {
         by
         en
         ru
       }
+      githubLink
+      id
+      name {
+        by
+        en
+        ru
+      }
+      photoLink
     }
   }
 }
