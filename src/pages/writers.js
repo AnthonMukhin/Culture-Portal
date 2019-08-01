@@ -1,19 +1,41 @@
 import React, { useState } from "react";
+import { Link, graphql } from "gatsby";
+
 import { useTranslation } from 'react-i18next';
 import '../utils/i18next';
-import { Link } from "gatsby";
-
 import Layout from "../components/layout/layout";
 
-export default ({location}) => {
+export const queryWriters = graphql`
+query WritersList {
+  allContentfulAuthor {
+    nodes {
+      name {
+        by
+        en
+        ru
+      }
+      placeOfBirth {
+        by
+        en
+        ru
+      }
+      id
+      avatar {
+        file {
+          url
+        }
+      }
+    }
+  }
+}
+`
+export default ({ data }) => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   const { t } = useTranslation('writers');
 
-  const allAuthors = location.state[0];
+  const allAuthors = data.allContentfulAuthor.nodes;
   const [writersList, setWritersList] = useState(allAuthors);
-  console.log('from WRITERS:');
-  console.log(allAuthors);
 
   const searchWriter = (input) => {
     const value = input.target.value.toLowerCase();
@@ -27,10 +49,11 @@ export default ({location}) => {
   }
 
   const writersForPage = writersList.map((author) => {
+    const nameForUrl = author.name.en.replace(/\s/g, '')
     return (
       <li key={author.id}>
         <Link
-          to="/writer"
+          to={`/writer/${nameForUrl}`}
           state={author}>
             <h3>{author.name[currentLang]}</h3>
         </Link>
