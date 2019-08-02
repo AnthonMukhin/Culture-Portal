@@ -6,6 +6,10 @@
     "main": "Main",
     "writers": "Writers"
   },
+  "team": {
+    "title": "Team of developers"
+  },
+
   "map": {
     "title": ""
   },
@@ -18,5 +22,9 @@
   },
   "biography": {
     "title": "Biography"
+  },
+  "works": {
+    "title": "Works list"
   }
+
 }
