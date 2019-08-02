@@ -10,7 +10,6 @@ export default (writer) => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  console.log(writer.name, 'writer');
   return (
     <div className="container">
       <div className='btn-group col-12 align-items-center row'>
