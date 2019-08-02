@@ -7,17 +7,17 @@ import { useTranslation } from 'react-i18next';
 import '../utils/i18next';
 
 
-export const queryTeam = graphql`
-query MyQueryTeam {
-  allContentfulTeam {
+export const query = graphql`
+query MyQuery {
+  allContentfulAuthor {
+    totalCount
     nodes {
-      contribution {
+
+      summary {
         by
         en
         ru
       }
-      photoLink
-      githubLink
       name {
         by
         en
@@ -25,8 +25,26 @@ query MyQueryTeam {
       }
     }
   }
+  allContentfulTeam {
+    nodes {
+      githubLink
+      id
+      photoLink
+      name {
+        by
+        en
+        ru
+      }
+      contribution {
+        by
+        en
+
+      }
+    }
+  }
 }
 `
+
 
 export default ({data}) => {
   const dataTeam = data.allContentfulTeam.nodes;
