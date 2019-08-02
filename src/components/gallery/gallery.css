@@ -12,10 +12,6 @@
   text-align: left;
 }
 
-.alice-carousel {
-  width: 50%;
-}
-
 .slide {
   height: 300px;
   background-repeat: no-repeat;
@@ -39,6 +35,11 @@
   background-position: center;
   margin: 10px;
   cursor: pointer;
+  transition: 0.2s ease all;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
   transition: 0.2s ease all;
 }
 
@@ -70,4 +71,11 @@
   transition: 0.2s ease all;
   top: 1px;
   position: relative;
+}
+
+.slide-image,
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }

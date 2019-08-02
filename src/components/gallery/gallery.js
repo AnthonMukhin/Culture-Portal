@@ -46,7 +46,13 @@ export default class Carousel extends React.Component {
           className="gallery-item"
           style={divStyle}
           onClick={() => this.slideTo(i)}
-        />
+        >
+          <img
+            src={item.key}
+            className="gallery-image"
+            alt=""
+          />
+        </div>
     );
   };
 
@@ -73,7 +79,14 @@ export default class Carousel extends React.Component {
           key={picture}
           style={divStyle}
           onDragStart={handleOnDragStart}
-        />
+        >
+          <img
+            src={picture}
+            key={picture}
+             className="slide-image"
+            alt=""
+          />
+        </div>
       );
     });
   }
@@ -81,7 +94,7 @@ export default class Carousel extends React.Component {
   render() {
     const { currentIndex } = this.state;
     return (
-      <div>
+      <div className="container">
         <AliceCarousel
           items={this.state.pictures}
           slideToIndex={currentIndex}
