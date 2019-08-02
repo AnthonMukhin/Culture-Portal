@@ -47,7 +47,11 @@ export default class Carousel extends React.Component {
           style={divStyle}
           onClick={() => this.slideTo(i)}
         >
-
+          <img
+            src={item.key}
+            className="gallery-image"
+            alt=""
+          />
         </div>
     );
   };
@@ -79,7 +83,7 @@ export default class Carousel extends React.Component {
           <img
             src={picture}
             key={picture}
-             className="slideImage"
+             className="slide-image"
             alt=""
           />
         </div>
