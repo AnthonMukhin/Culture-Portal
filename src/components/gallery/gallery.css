@@ -42,6 +42,11 @@
   transition: 0.2s ease all;
 }
 
+.gallery-item:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease all;
+}
+
 .buttons-container {
   display: flex;
   justify-content: center;
