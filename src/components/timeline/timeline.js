@@ -1,11 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
+import '../../styles/bootstrap.min.css'
 
 export default ({ biography }) => {
   const { t, i18n } = useTranslation('biography');
-  
-  const events = biography.map((item, index) => 
+
+  const events = biography.map((item, index) =>
     <TimelineItem
       key={index}
       dateText={item.date}
@@ -16,7 +17,7 @@ export default ({ biography }) => {
   );
 
   return (
-    <section>
+    <section className="container">
       <h3>{t('title')}</h3>
       <Timeline lineColor={'#ddd'}>
         {events}

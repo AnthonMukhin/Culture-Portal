@@ -13,11 +13,8 @@ const WriterTemplate = (props) => {
   console.log(writer);
   return (
     <Layout>
-<<<<<<< HEAD
       {description(writer)}
-=======
       <Timeline biography={writer.biographyTimeline}></Timeline>
->>>>>>> master
       <Gallery photos={writer.photoGallery}></Gallery>
       {video(writer.videoLink)}
       <ActivityMap coords={writer.placeOfActivity}></ActivityMap>
