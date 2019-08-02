@@ -2,6 +2,7 @@ import React from "react";
 
 import Layout from "../components/layout/layout";
 import video from './../components/video-modal/video';
+import ActivityMap from "../components/activity-map/activity-map";
 
 const WriterTemplate = (props) => {
   const writer = props.pageContext.writer;
@@ -10,6 +11,7 @@ const WriterTemplate = (props) => {
   return (
     <Layout>
       {video(writer.videoLink)}
+      <ActivityMap coords={writer.placeOfActivity}></ActivityMap>
     </Layout>
   );
 }
