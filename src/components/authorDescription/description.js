@@ -28,7 +28,7 @@ export default (writer) => {
         </div>
         <div className="author-description col-xl-8 col-lg-8 col-md-12">
           <h3>{writer.name[currentLang]}</h3>
-          <p>{writer.summary[currentLang]}</p>
+          <p>{'— ' + writer.summary[currentLang]}</p>
         </div>
       </div>
     </div>
