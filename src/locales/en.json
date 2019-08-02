@@ -18,5 +18,8 @@
   },
   "biography": {
     "title": "Biography"
+  },
+  "works": {
+    "title": "Works list"
   }
 }
