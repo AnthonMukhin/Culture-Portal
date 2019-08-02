@@ -24,12 +24,9 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-i18next": "^10.11.4",
-<<<<<<< HEAD
-    "uniqid": "^5.0.3"
-=======
+    "uniqid": "^5.0.3",
     "react-yandex-maps": "^4.0.1",
     "vertical-timeline-component-for-react": "^1.0.6"
->>>>>>> master
   },
   "devDependencies": {
     "prettier": "^1.18.2",

@@ -16,7 +16,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <h3>{t("watch")}:</h3>
-      <Team data ={dataTeam} lang={currentLanguage}/>
+      <div className="container">
+      {Team(teamUnit)}
+      </div>
     </Layout>
   );
 };
