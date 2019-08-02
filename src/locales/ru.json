@@ -15,5 +15,8 @@
   },
   "writers": {
     "searchPlaceholder": "Поиск по имени автора или месту рождения..."
+  },
+  "biography": {
+    "title": "Биография"
   }
 }

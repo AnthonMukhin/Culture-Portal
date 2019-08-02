@@ -15,5 +15,8 @@
   },
   "writers": {
     "searchPlaceholder": "Search by writers name or palce of birth..."
+  },
+  "biography": {
+    "title": "Biography"
   }
 }
