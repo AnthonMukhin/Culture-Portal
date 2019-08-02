@@ -16,7 +16,7 @@ const WriterTemplate = (props) => {
     <Layout>
       {description(writer)}
       <Timeline biography={writer.biographyTimeline}></Timeline>
-      <Gallery photos={writer.photoGallery}></Gallery>
+      <Gallery photos={writer.photoGallery} author={writer}></Gallery>
       {works(writer.listOfArtistsWorks)}
       {video(writer.videoLink)}
       <ActivityMap coords={writer.placeOfActivity}></ActivityMap>

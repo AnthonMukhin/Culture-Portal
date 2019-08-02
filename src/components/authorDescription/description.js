@@ -22,7 +22,7 @@ export default (writer) => {
     <div className="container">
       <div className='author-review col-12 row'>
         <div className="author-photo-container col-xl-4 col-lg-4 col-md-12">
-          <div class="author-photo" style={divStyle}>
+          <div className="author-photo" style={divStyle}>
           <img src={writer.avatar.file.url} className="photo" style={photoStyle} alt="" />
           </div>
         </div>
