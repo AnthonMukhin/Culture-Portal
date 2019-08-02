@@ -1,16 +1,25 @@
 import React from "react";
 import { graphql } from 'gatsby';
 
+import Team from "../components/team/Team"
 import Layout from "../components/layout/layout";
+import { useTranslation } from 'react-i18next';
+import '../utils/i18next';
 
 export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
   const teamUnit = data.allContentfulTeam.nodes;
+  const {t} = useTranslation("video");
   console.log('fron INDEX.JS:');
   console.log(authorsArraySummary);
   console.log(teamUnit);
   return (
-    <Layout></Layout>
+    <Layout>
+      <h3>{t("watch")}:</h3>
+      <div className="container">
+      {Team(teamUnit)}
+      </div>
+    </Layout>
   );
 };
 
