@@ -82,7 +82,6 @@ export default class Carousel extends React.Component {
         >
           <img
             src={picture}
-            key={picture}
              className="slide-image"
             alt=""
           />

@@ -82,7 +82,7 @@ export default ({children}) => {
       <Helmet>
         <title>Писатели</title>
       </Helmet>
-      <header className='row justify-content-around align-items-center p-0'>
+      <header className='row justify-content-around align-items-center'>
         <h1 className='col-3'>{t('title')}</h1>
         <MainNavigation authorsArray={authorsArray}></MainNavigation>
         <LanguageSelector></LanguageSelector>
