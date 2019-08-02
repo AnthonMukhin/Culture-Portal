@@ -81,7 +81,7 @@ export default class Carousel extends React.Component {
   render() {
     const { currentIndex } = this.state;
     return (
-      <div>
+      <div className="container">
         <AliceCarousel
           items={this.state.pictures}
           slideToIndex={currentIndex}

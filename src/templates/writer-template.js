@@ -12,7 +12,7 @@ const WriterTemplate = (props) => {
   console.log(writer);
   return (
     <Layout>
-            {description(writer)}
+      {description(writer)}
       <Gallery photos={writer.photoGallery}></Gallery>
       {video(writer.videoLink)}
       <ActivityMap coords={writer.placeOfActivity}></ActivityMap>
