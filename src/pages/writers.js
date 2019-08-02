@@ -9,6 +9,12 @@ export const queryWriters = graphql`
 query WritersList {
   allContentfulAuthor {
     nodes {
+      avatar {
+        file {
+          url
+        }
+      }
+      id
       name {
         by
         en
@@ -19,11 +25,10 @@ query WritersList {
         en
         ru
       }
-      id
-      avatar {
-        file {
-          url
-        }
+      summary {
+        by
+        en
+        ru
       }
     }
   }
@@ -55,7 +60,14 @@ export default ({ data }) => {
         <Link
           to={`/writer/${nameForUrl}`}
           state={author}>
-            <h3>{author.name[currentLang]}</h3>
+          <h3>{author.name[currentLang]}</h3>
+        </Link>
+        <p>{author.summary[currentLang]}</p>
+        <p>{t('born')} {author.placeOfBirth[currentLang]}</p>
+        <Link
+          to={`/writer/${nameForUrl}`}
+          state={author}>
+          <p>{t('further')}</p>
         </Link>
       </li>
     )
