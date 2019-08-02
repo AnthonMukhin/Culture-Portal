@@ -60,15 +60,15 @@ export default ({ data }) => {
         <Link
           to={`/writer/${nameForUrl}`}
           state={author}>
-          <img src={author.avatar.file.url} alt="writersAvatar"/>
+          <h3>{author.name[currentLang]}</h3>
         </Link>
-        <div>
-          <Link
-            to={`/writer/${nameForUrl}`}
-            state={author}>
-            <h3>{author.name[currentLang]}</h3>
-          </Link>
-        </div>
+        <p>{author.summary[currentLang]}</p>
+        <p>{t('born')} {author.placeOfBirth[currentLang]}</p>
+        <Link
+          to={`/writer/${nameForUrl}`}
+          state={author}>
+          <p>{t('further')}</p>
+        </Link>
       </li>
     )
   });
