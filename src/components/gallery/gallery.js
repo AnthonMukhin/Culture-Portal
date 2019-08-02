@@ -47,12 +47,6 @@ export default class Carousel extends React.Component {
           style={divStyle}
           onClick={() => this.slideTo(i)}
         />
-      // <img
-      //   src={item.key}
-      //   className="gallery-item"
-      //   alt=""
-      //   onClick={() => this.slideTo(i)}
-      // />
     );
   };
 
@@ -80,13 +74,6 @@ export default class Carousel extends React.Component {
           style={divStyle}
           onDragStart={handleOnDragStart}
         />
-        // <img
-        //   alt=""
-        //   key={picture}
-        //   src={picture}
-        //   style={{ width: "100%" }}
-        //   onDragStart={handleOnDragStart}
-        // />
       );
     });
   }
@@ -100,18 +87,17 @@ export default class Carousel extends React.Component {
           slideToIndex={currentIndex}
           onSlideChanged={this.onSlideChanged}
           mouseDragEnabled
-          buttonsDisabled={true}
           duration={400}
         />
 
-        <div class="buttons-container">
+        {/* <div class="buttons-container">
           <button class="slider-button" onClick={() => this.slidePrev()}>
             ←
           </button>
           <button class="slider-button" onClick={() => this.slideNext()}>
             →
           </button>
-        </div>
+        </div> */}
 
         <div className="gallery-items">
           {this.state.pictures.map(this.thumbItem)}
