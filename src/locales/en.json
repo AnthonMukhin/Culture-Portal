@@ -18,7 +18,9 @@
     "close": "Close"
   },
   "writers": {
-    "searchPlaceholder": "Search by writers name or palce of birth..."
+    "searchPlaceholder": "Search by writers name or palce of birth...",
+    "born": "Was born:",
+    "further": "read more..."
   },
   "biography": {
     "title": "Biography"

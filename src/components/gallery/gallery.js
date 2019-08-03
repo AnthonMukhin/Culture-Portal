@@ -41,9 +41,11 @@ export default class Carousel extends React.Component {
     const divStyle = {
       backgroundImage: `url(${item.key})`
     };
+
     return (
         <div
           className="gallery-item"
+          key={i}
           style={divStyle}
           onClick={() => this.slideTo(i)}
         >
@@ -76,7 +78,6 @@ export default class Carousel extends React.Component {
       return (
         <div
           className="slide"
-          key={picture}
           style={divStyle}
           onDragStart={handleOnDragStart}
         >
