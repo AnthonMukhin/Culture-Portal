@@ -1,6 +1,6 @@
 {
   "layout": {
-    "title": "Пісьменнікі беларусі"
+    "title": "Пісьменнікі Беларусі"
   },
   "main-navigation": {
     "main": "Галоўная",
@@ -17,9 +17,9 @@
     "close": "Зачыніць"
   },
   "writers": {
-    "searchPlaceholder": "Пошук па імя аўтара або месцы нараджэння...",
-    "born": "Нарадзиуся:",
-    "further": "чытать далей..."
+    "searchPlaceholder": "Пошук па іменi аўтара або месце нараджэння...",
+    "born": "Нарадзiўся:",
+    "further": "чытаць далей..."
   },
   "biography": {
     "title": "Біяграфія"
@@ -30,5 +30,8 @@
   "writerOfTheDay": {
     "title": "Пiсьменнiк дня",
     "button": "Падрабязней"
+  },
+    "descriptionPortal": {
+      "text": "Апiсанне парталу"
   }
 }
