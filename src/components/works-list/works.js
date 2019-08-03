@@ -14,7 +14,7 @@ export default (worksList) => {
   const worksContainer = () => {
     const list = worksList.map((elem, index) => {
       return (
-      <li className="work" key={elem.date}>
+      <li className="work " key={elem.date}>
         {elem.date}&nbsp; — &nbsp;{elem.event[currentLang]}
       </li>
       );
@@ -29,7 +29,7 @@ export default (worksList) => {
 
   return (
     <div className="container">
-      <h3>{t('title')}</h3>
+      <h3 className="col text-center">{t('title')}</h3>
       {worksContainer()}
     </div>
   );
