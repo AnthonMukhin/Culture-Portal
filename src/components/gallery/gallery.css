@@ -28,8 +28,8 @@
 }
 
 .gallery-item {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

@@ -39,7 +39,7 @@ export default class Carousel extends React.Component {
 
   thumbItem = (item, i) => {
     const divStyle = {
-      backgroundImage: `url(${item.key})`
+      backgroundImage: `${item.props.style.backgroundImage}`
     };
 
     return (
@@ -50,7 +50,7 @@ export default class Carousel extends React.Component {
           onClick={() => this.slideTo(i)}
         >
           <img
-            src={item.key}
+            src={item.props.style.backgroundImage}
             className="gallery-image"
             alt=""
           />
