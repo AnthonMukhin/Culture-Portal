@@ -9,7 +9,7 @@ i18n
     resources: locales,
     fallbackLng: Object.keys(languages).find(lang => languages[lang].default),
     lng: Object.keys(languages).find(lang => languages[lang].default),
-    debug: true, 
+    debug: false,
     preload: ['ru', 'en', 'by'],
     initImmediate: false,
     react: {

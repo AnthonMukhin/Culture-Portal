@@ -11,9 +11,6 @@ export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
   const teamUnit = data.allContentfulTeam.nodes;
   const {t} = useTranslation("descriptionPortal");
-  console.log('fron INDEX.JS:');
-  console.log(authorsArraySummary);
-  console.log(teamUnit);
   return (
     <Layout>
       <div className="container">
