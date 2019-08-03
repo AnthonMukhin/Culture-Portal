@@ -31,6 +31,9 @@
   "writerOfTheDay": {
     "title": "Writer of the day",
     "button": "More details"
-  }
+  },
+  "descriptionPortal": {
+    "text": "description"
+}
 
 }
