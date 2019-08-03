@@ -30,7 +30,8 @@
   },
   "devDependencies": {
     "prettier": "^1.18.2",
-    "react-alice-carousel": "^1.15.2"
+    "react-alice-carousel": "^1.15.2",
+    "webpack": "^4.39.1"
   },
   "repository": {
     "type": "git",
