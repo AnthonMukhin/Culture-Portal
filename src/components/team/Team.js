@@ -19,7 +19,9 @@ export default data => {
 
       {dataTeam.map(item => (
         <Fragment key={uniqid()}>
-          <div key={uniqid()} className="team-item">
+          <div
+          key={uniqid()}
+          className="team-item">
             <img
               key={uniqid()}
               className="team-image"
