@@ -5,6 +5,7 @@ import Team from "../components/team/Team"
 import Layout from "../components/layout/layout";
 import { useTranslation } from 'react-i18next';
 import '../utils/i18next';
+import WriterOfTheDay from "../components/writerOfTheDay/writerOfTheDay";
 
 export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
@@ -16,6 +17,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <h3>{t("watch")}:</h3>
+      <div className="container">
+      {WriterOfTheDay(authorsArraySummary)}
+      </div>
       <div className="container">
       {Team(teamUnit)}
       </div>

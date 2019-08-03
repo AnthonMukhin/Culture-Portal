@@ -26,5 +26,9 @@
   },
   "works": {
     "title": "Спіс твораў"
+  },
+  "writerOfTheDay": {
+    "title": "Пiсьменнiк дня",
+    "button": "Падрабязней"
   }
 }
