@@ -25,6 +25,10 @@
   },
   "works": {
     "title": "Works list"
+  },
+  "writerOfTheDay": {
+    "title": "Writer of the day",
+    "button": "More details"
   }
 
 }
