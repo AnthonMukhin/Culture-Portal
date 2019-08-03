@@ -33,7 +33,8 @@
     "button": "More details"
   },
   "descriptionPortal": {
-    "text": "description"
+    "text": "description",
+    "description": "On the site you will find Belarusian writers with their biographies, painted by year in a convenient visual format, a list of the most famous works and the year of their writing, public photos, documentaries , as well as the places creative activities."
 }
 
 }
