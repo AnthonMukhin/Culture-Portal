@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 
-import { useTranslation } from "react-i18next";
-import "../../utils/i18next";
+import { useTranslation } from 'react-i18next';
+import '../../utils/i18next';
 
 import '../../styles/bootstrap.min.css'
-import "./writerOfTheDay.css";
+import './writerOfTheDay.css';
 
 export default dataWriter => {
   const { i18n } = useTranslation();
@@ -15,7 +15,7 @@ export default dataWriter => {
   const data = dataWriter;
 
   const index = (Math.floor(Math.random() * (data.length))).toString();
-  const nameForUrl = data[index].name.en.replace(/\s/g, "");
+  const nameForUrl = data[index].name.en.replace(/\s/g, '');
   return (
     <>
       <div className="container">
