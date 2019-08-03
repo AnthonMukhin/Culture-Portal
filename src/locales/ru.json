@@ -30,5 +30,8 @@
   "writerOfTheDay": {
     "title": "Писатель дня",
     "button": "Подробнее"
+  },
+  "descriptionPortal": {
+    "text": "Описание портала"
   }
 }

@@ -31,7 +31,7 @@ export default data => {
             <p key={uniqid()}>{item.name[currentLanguage]}</p>
             <a
             key={uniqid()}
-            href={item.githubLink}>gitHub</a>
+            href={item.githubLink}>GitHub</a>
             <p key={uniqid()}>{item.contribution[currentLanguage]}</p>
           </div>
         </Fragment>

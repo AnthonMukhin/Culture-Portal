@@ -10,13 +10,15 @@ import WriterOfTheDay from "../components/writerOfTheDay/writerOfTheDay";
 export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
   const teamUnit = data.allContentfulTeam.nodes;
-  const {t} = useTranslation("video");
+  const {t} = useTranslation("descriptionPortal");
   console.log('fron INDEX.JS:');
   console.log(authorsArraySummary);
   console.log(teamUnit);
   return (
     <Layout>
-      <h3>{t("watch")}:</h3>
+      <div className="container">
+        <p>{t("text")}:</p>
+      </div>
       <div className="container">
       {WriterOfTheDay(authorsArraySummary)}
       </div>
