@@ -10,8 +10,6 @@ import Timeline from "../components/timeline/timeline";
 
 const WriterTemplate = (props) => {
   const writer = props.pageContext.writer;
-  console.log("from writer");
-  console.log(writer);
   return (
     <Layout>
       {description(writer)}
