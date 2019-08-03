@@ -44,7 +44,7 @@ export default class Carousel extends React.Component {
 
     return (
         <div
-          className="gallery-item"
+          className="gallery-item col-xl-2 col-lg-3 col-md-4"
           key={i}
           style={divStyle}
           onClick={() => this.slideTo(i)}
@@ -112,7 +112,7 @@ export default class Carousel extends React.Component {
           </button>
         </div> */}
 
-        <div className="gallery-items">
+        <div className="gallery-items row">
           {this.state.pictures.map(this.thumbItem)}
         </div>
       </div>

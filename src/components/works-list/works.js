@@ -21,7 +21,7 @@ export default (worksList) => {
     });
 
     return (
-      <ul className="works-list">
+      <ul className="works-list col-12">
         {list}
       </ul>
     );
