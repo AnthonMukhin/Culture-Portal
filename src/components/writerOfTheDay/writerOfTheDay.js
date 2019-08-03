@@ -9,7 +9,8 @@ import './writerOfTheDay.css';
 
 const daysWriterNumber = (writers) => {
   const msInDay = 86400000;
-  const dayNumber = Math.floor(new Date().getTime() / msInDay);
+  const msInMinute = 60000;
+  const dayNumber = Math.floor((new Date().getTime() - new Date().getTimezoneOffset() * msInMinute) / msInDay);
   return dayNumber - Math.floor(dayNumber / writers.length) * writers.length;
 }
 
