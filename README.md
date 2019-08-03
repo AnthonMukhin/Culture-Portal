@@ -2,31 +2,31 @@
 
 
 -   Main page with
-	(-)   portal's description
-    (+)   'author of the day' block
-    (-)   developer team description (userpics + github accounts + nicknames/names), and contribution of each member
--  (-) Navigation - это якоря  или две кнопки авторы  и на главную ??? 
--   Page with a list of authors on the given topic with search widget
-    (+)   search should be on the current language with ability to search by name, city/place of birth
-    (+)   5-7 authors are enough to complete the task successfully. You can take more, if you have enough time and willingness
--   Page of an author with
-    (+)   Author's name
-    (-)   Years of life
-    (+)   his/her picture
-    (+)   biography in the form of timeline (example  [here](https://reactjsexample.com/a-vertical-timeline-component-for-react/))
-    (+)   list of artist's works with the date of creation
-    (+)   photo gallery with author's picture and pictures of his/her works
-    (+)   youtube video about the author / works / period of time author lived. Video must open in a new overlay (modal)
-    (+)   place of author's major activity on a map: google / openstreetmap (leaflet) / yandex
-    (+)   it's fine if  **not**  every element (timeline, video, photo gallery, map) will be present on every page
-(+)   Web portal must be deployed on Github Pages / netlify / google firebase / etc
-(+)   Web portal has to be in 3 languages - by, ru, en. Content may vary for each version but interface elements have to be translated. For this purposes you can use this library  [https://www.i18next.com/](https://www.i18next.com/)  or any similar;
+	(-)   portal's description  
+    (+)   'author of the day' block  
+    (-)   developer team description (userpics + github accounts + nicknames/names), and contribution of each member   
+-  (+) Navigation  
+-   Page with a list of authors on the given topic with search widget  
+    (+)   search should be on the current language with ability to search by name, city/place of birth  
+    (+)   5-7 authors are enough to complete the task successfully. You can take more, if you have enough time and willingness  
+-   Page of an author with  
+    (+)   Author's name  
+    (+)   Years of life 
+    (+)   his/her picture  
+    (+)   biography in the form of timeline   
+    (+)   list of artist's works with the date of creation  
+    (+)   photo gallery with author's picture and pictures of his/her works  
+    (+)   youtube video about the author / works / period of time author lived. Video must open in a new overlay (modal)  
+    (+)   place of author's major activity on a map: google / openstreetmap (leaflet) / yandex  
+    (-)   it's fine if  **not**  every element (timeline, video, photo gallery, map) will be present on every page  
+(+)   Web portal must be deployed on Github Pages / netlify / google firebase / etc  
+(+)   Web portal has to be in 3 languages - by, ru, en. Content may vary for each version but interface elements have to be translated. For this purposes you can use this library  or any similar;
 
-(-) Portal should be relatively correctly displayed on tablets and mobile phones.
+(-) Portal should be relatively corrgit ectly displayed on tablets and mobile phones.
 
 ##### Technical limitations:
 
-(+) You  **should**  develop portal using libraries of visual components such as  **material-ui**  or  **bootstrap**.
+(+) You  **should**  develop portal using libraries of visual components such as  **material-ui**  or  ***bootstrap***.
 
 (+) You  **should**  use  _Reactjs_  or use  _gatsbyjs_  to get additional points.
 
