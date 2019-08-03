@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Fragment} from "react"
 import uniqid from "uniqid"
 
 import { useTranslation } from "react-i18next"
@@ -18,18 +18,23 @@ export default data => {
     <section className="team-container">
 
       {dataTeam.map(item => (
-        <>
-          <div key={uniqid()} className="team-item">
+        <Fragment key={uniqid()}>
+          <div
+          key={uniqid()}
+          className="team-item">
             <img
+              key={uniqid()}
               className="team-image"
               src={item.photoLink}
               alt={JSON.stringify(item.name[currentLanguage])}
             />
-            <p>{item.name[currentLanguage]}</p>
-            <a href={item.githubLink}>gitHub</a>
-            <p>{item.contribution[currentLanguage]}</p>
+            <p key={uniqid()}>{item.name[currentLanguage]}</p>
+            <a
+            key={uniqid()}
+            href={item.githubLink}>gitHub</a>
+            <p key={uniqid()}>{item.contribution[currentLanguage]}</p>
           </div>
-        </>
+        </Fragment>
       ))}
     </section>
     </>
