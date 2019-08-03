@@ -7,6 +7,13 @@ import '../../utils/i18next';
 import '../../styles/bootstrap.min.css'
 import './writerOfTheDay.css';
 
+const daysWriterNumber = (writers) => {
+  const msInDay = 86400000;
+  const msInMinute = 60000;
+  const dayNumber = Math.floor((new Date().getTime() - new Date().getTimezoneOffset() * msInMinute) / msInDay);
+  return dayNumber - Math.floor(dayNumber / writers.length) * writers.length;
+}
+
 export default dataWriter => {
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
@@ -14,7 +21,7 @@ export default dataWriter => {
 
   const data = dataWriter;
 
-  const index = (Math.floor(Math.random() * (data.length))).toString();
+  const index = daysWriterNumber(data);
   const nameForUrl = data[index].name.en.replace(/\s/g, '');
   return (
     <>
