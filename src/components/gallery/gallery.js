@@ -5,6 +5,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import '../gallery/gallery.css';
 
 export default class Carousel extends React.Component {
+
   state = {
     currentIndex: 0,
     pictures: []
@@ -42,6 +43,8 @@ export default class Carousel extends React.Component {
       backgroundImage: `${item.props.style.backgroundImage}`
     };
 
+    const url = item.props.style.backgroundImage.substring(4, item.props.style.backgroundImage.length - 1);
+
     return (
         <div
           className="gallery-item col-xl-2 col-lg-3 col-md-4"
@@ -50,7 +53,7 @@ export default class Carousel extends React.Component {
           onClick={() => this.slideTo(i)}
         >
           <img
-            src={item.props.style.backgroundImage}
+            src={url}
             className="gallery-image"
             alt=""
           />
@@ -71,10 +74,12 @@ export default class Carousel extends React.Component {
 
   renderImages(pictures = []) {
     const handleOnDragStart = e => e.preventDefault();
+
     return pictures.map(picture => {
       const divStyle = {
         backgroundImage: `url(${picture})`
       };
+
       return (
         <div
           className="slide"
