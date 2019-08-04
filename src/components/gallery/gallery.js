@@ -109,11 +109,11 @@ export default class Carousel extends React.Component {
           duration={400}
         />
 
-        <div class="buttons-container">
-          <button class="slider-button" onClick={() => this.slidePrev()}>
+        <div className="buttons-container">
+          <button className="slider-button" onClick={() => this.slidePrev()}>
             ←
           </button>
-          <button class="slider-button" onClick={() => this.slideNext()}>
+          <button className="slider-button" onClick={() => this.slideNext()}>
             →
           </button>
         </div>
