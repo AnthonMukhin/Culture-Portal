@@ -9,6 +9,7 @@ export default (writer) => {
 
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
+
   const divStyle = {
     backgroundImage: `url('${writer.avatar.file.url}')`
   };
