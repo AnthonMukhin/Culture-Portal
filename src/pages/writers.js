@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import { useTranslation } from 'react-i18next';
 import '../utils/i18next';
 import Layout from "../components/layout/layout";
+import '../styles/writers.css';
 
 export const queryWriters = graphql`
 query WritersList {
@@ -54,37 +55,48 @@ export default ({ data }) => {
   }
 
   const writersForPage = writersList.map((author) => {
-    const nameForUrl = author.name.en.replace(/\s/g, '')
+    const nameForUrl = author.name.en.replace(/\s/g, '');
+    const divStyle={
+      backgroundImage: `url(${author.avatar.file.url})`
+    };
+    let summary = null;
+    if (author.summary[currentLang].length > 220) {
+      summary = author.summary[currentLang].substr(0, 220) + ' . . .';
+    } else summary = author.summary[currentLang];
+
     return (
-      <li key={author.id}>
-        <Link
-          to={`/writer/${nameForUrl}`}>
-          <img src={author.avatar.file.url} alt="writersAvatar" />
-        </Link>
-        <Link
-          to={`/writer/${nameForUrl}`}>
-          <h3>{author.name[currentLang]}</h3>
-        </Link>
-        <p>{author.summary[currentLang]}</p>
-        <p>{t('born')} {author.placeOfBirth[currentLang]}</p>
-        <Link
-          to={`/writer/${nameForUrl}`}>
-          <p>{t('further')}</p>
-        </Link>
-      </li>
+      <div className="card mb-3 col-xl-6 col-lg-12 col-md-12 col-11" key={author.id}>
+        <div className="row no-gutters" style={{height: '100%'}}>
+          <div className="image-container col-xl-5 row align-items-start justify-content-center">
+            <div className="card-img" style={divStyle}>
+              <img src={author.avatar.file.url} alt="writersAvatar"/>
+            </div>
+          </div>
+          <div className="col-xl-7">
+            <div className="card-body d-flex row justify-content-between" style={{height: '100%'}}>
+              <h5 className="card-title">{author.name[currentLang]}</h5>
+              <p className="card-text"><small className="text-muted">{t('born')} {author.placeOfBirth[currentLang]}</small></p>
+              <p className="card-text">{summary}</p>
+              <Link to={`/writer/${nameForUrl}`} className="card-text button-container align-self-end">
+              <button className="btn btn-info">{t('further')}</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     )
   });
   return (
     <Layout>
-      <div className="searchbar form-group">
       <input
+        className='form-control col-xl-4 col-md-5 col-9'
         size="43"
         type="text"
         placeholder={t('searchPlaceholder')}
         onChange={searchWriter}
+        style={{margin: '10px auto'}}
       />
-    </div>
-      <ul>{writersForPage}</ul>
+      <div className="row writers-list justify-content-around m-0">{writersForPage}</div>
     </Layout>
   );
 };

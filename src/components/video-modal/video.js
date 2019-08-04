@@ -9,13 +9,13 @@ export default (videoLink) => {
   const [isVideo, setVideoStatus] = useState(false);
   const { t } = useTranslation('video');
   return (
-    <div>
-    <button onClick={() => setVideoStatus(!isVideo)}>{t('watch')}</button>
+    <div className='row justify-content-center col-12 p-0 m-0'>
+    <button className="btn btn-info col-md-5 col-xl-3 col-7 m-2" onClick={() => setVideoStatus(!isVideo)}>{t('watch')}</button>
     {isVideo &&
       ReactDOM.createPortal(
         <div>
           <div>
-          <button onClick={() => setVideoStatus(!isVideo)}>{t('close')}</button>
+          <button className="btn btn-info" onClick={() => setVideoStatus(!isVideo)}>{t('close')}</button>
           <iframe
             title="writer-video"
             width="100%"

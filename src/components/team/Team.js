@@ -1,20 +1,20 @@
-import React, {Fragment} from "react"
-import uniqid from "uniqid"
+import React, {Fragment} from 'react';
+import uniqid from 'uniqid';
 
-import { useTranslation } from "react-i18next"
-import "../../utils/i18next"
+import { useTranslation } from 'react-i18next';
+import '../../utils/i18next';
 
-import "./team.css"
+import './team.css';
 
 export default data => {
-  const { i18n } = useTranslation()
-  const currentLanguage = i18n.language
-  const { t } = useTranslation("team")
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const { t } = useTranslation('team');
 
-  const dataTeam = data
+  const dataTeam = data;
   return (
     <>
-    <h3>{t("title")}</h3>
+    <h3 style={{textAlign: 'center'}}>{t("title")}</h3>
     <section className="team-container">
 
       {dataTeam.map(item => (
@@ -31,8 +31,8 @@ export default data => {
             <p key={uniqid()}>{item.name[currentLanguage]}</p>
             <a
             key={uniqid()}
-            href={item.githubLink}>GitHub</a>
-            <p key={uniqid()}>{item.contribution[currentLanguage]}</p>
+            href={item.githubLink}><button className="btn btn-secondary">GitHub</button></a>
+            <p style={{overflow: 'hidden'}}key={uniqid()}>{item.contribution[currentLanguage]}</p>
           </div>
         </Fragment>
       ))}

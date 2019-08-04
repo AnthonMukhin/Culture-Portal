@@ -1,11 +1,11 @@
-import React from "react";
-import { graphql } from 'gatsby';
+import React from 'react';
+import { graphql } from 'gatsby';                 
 
-import Team from "../components/team/Team"
-import Layout from "../components/layout/layout";
+import Team from '../components/team/Team';
+import Layout from '../components/layout/layout';
 import { useTranslation } from 'react-i18next';
 import '../utils/i18next';
-import WriterOfTheDay from "../components/writerOfTheDay/writerOfTheDay";
+import WriterOfTheDay from '../components/writerOfTheDay/writerOfTheDay';
 
 export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
@@ -23,7 +23,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="container">
-        <p>{t("text")}:</p>
+        <p className="alert alert-info" style={{fontSize: '24px', marginTop: '15px'}}>{t("text")}:</p>
       </div>
       <div className="container">
       {WriterOfTheDay(authorsArraySummary[daysWriterNumber()])}
@@ -75,5 +75,5 @@ query MyQuery {
     }
   }
 }
-`
+`;
 

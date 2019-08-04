@@ -83,7 +83,7 @@ export default ({children}) => {
         <title>{t('header')}</title>
       </Helmet>
       <header className='row justify-content-around align-items-center'>
-        <h1 className='col-3'>{t('title')}</h1>
+        <h1 className='col-md-3 col-11'>{t('title')}</h1>
         <MainNavigation authorsArray={authorsArray}></MainNavigation>
         <LanguageSelector></LanguageSelector>
       </header>
