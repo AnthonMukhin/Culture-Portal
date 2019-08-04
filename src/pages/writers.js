@@ -73,11 +73,11 @@ export default ({ data }) => {
             </div>
           </div>
           <div className="col-xl-7">
-            <div className="card-body d-flex align-items-start" style={{height: '100%'}}>
+            <div className="card-body d-flex row justify-content-between" style={{height: '100%'}}>
               <h5 className="card-title">{author.name[currentLang]}</h5>
               <p className="card-text"><small className="text-muted">{t('born')} {author.placeOfBirth[currentLang]}</small></p>
               <p className="card-text">{summary}</p>
-              <Link to={`/writer/${nameForUrl}`} className="card-text button-container align-self-end" style={{margin: '0 auto', width: '100%'}}>
+              <Link to={`/writer/${nameForUrl}`} className="card-text button-container align-self-end">
               <button className="btn btn-info">{t('further')}</button>
               </Link>
             </div>
