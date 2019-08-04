@@ -11,13 +11,22 @@ export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
   const teamUnit = data.allContentfulTeam.nodes;
   const {t} = useTranslation("descriptionPortal");
+
+  const daysWriterNumber = () => {
+    const msInDay = 86400000;
+    const msInMinute = 60000;
+    const dayNumber = Math.floor((new Date().getTime() - new Date().getTimezoneOffset() * msInMinute) / msInDay);
+    const authorsNumber = dayNumber - Math.floor(dayNumber / authorsArraySummary.length) * authorsArraySummary.length;
+    return authorsNumber;
+    }
+
   return (
     <Layout>
       <div className="container">
         <p>{t("text")}:</p>
       </div>
       <div className="container">
-      {WriterOfTheDay(authorsArraySummary)}
+      {WriterOfTheDay(authorsArraySummary[daysWriterNumber()])}
       </div>
       <div className="container">
       {Team(teamUnit)}

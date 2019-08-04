@@ -7,34 +7,24 @@ import '../../utils/i18next';
 import '../../styles/bootstrap.min.css'
 import './writerOfTheDay.css';
 
-const daysWriterNumber = (writers) => {
-  const msInDay = 86400000;
-  const msInMinute = 60000;
-  const dayNumber = Math.floor((new Date().getTime() - new Date().getTimezoneOffset() * msInMinute) / msInDay);
-  return dayNumber - Math.floor(dayNumber / writers.length) * writers.length;
-}
-
 export default dataWriter => {
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
   const { t } = useTranslation("writerOfTheDay");
 
-  const data = dataWriter;
-
-  const index = daysWriterNumber(data);
-  const nameForUrl = data[index].name.en.replace(/\s/g, '');
+  const nameForUrl = dataWriter.name.en.replace(/\s/g, '');
   return (
     <>
       <div className="container">
         <h3>{t("title")}:</h3>
 
         <img
-          src={data[index].avatar.file.url}
-          alt={data[index].name[currentLanguage]}
+          src={dataWriter.avatar.file.url}
+          alt={dataWriter.name[currentLanguage]}
           style={{ width: `150px` }}
         />
-        <h3>{data[index].name[currentLanguage]}</h3>
-        <p>{data[index].summary[currentLanguage]}</p>
+        <h3>{dataWriter.name[currentLanguage]}</h3>
+        <p>{dataWriter.summary[currentLanguage]}</p>
         <Link to={`/writer/${nameForUrl}`}>
           <button className="btn-primary">{t("button")}</button>
         </Link>
