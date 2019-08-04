@@ -1,12 +1,27 @@
+# Rolling SSchool - CodeJam-Culture-Portal
+### Group №32:
+
+|                |                               |github                       |
+|----------------|-------------------------------|-----------------------------|
+|Viachaslau      |Tkachou                        |prakdown                     |
+|Anton           |Mukhin                         |anthonmukhin                 |
+|Yaroslav        |Barkovskiy                     |barikq                       |
+|Illia           |Dzemchanka                     |hellsingi                    |
+|Yauhen          |Kviatkouski                    |yauhenkviatkouski            |
+|Alena           |Shkradziuk                     |alenashkr                    |
+
+Link to worklog:
+https://docs.google.com/spreadsheets/d/1LxZKqh12pHVUSfTHJIP2DTG97zWyQjL1FFRXUHaYt8o/edit#gid=0
+
+
 ## Technical requirements
 
 
-+   Main page with
-	(+)   portal's description  
++   Main page with portal's description  
     (+)   'author of the day' block  
     (+)   developer team description (userpics + github accounts + nicknames/names), and contribution of each member   
 +  (+) Navigation  
-+   Page with a list of authors on the given topic with search widget  
++   Page with a list of authors
     (+)   search should be on the current language with ability to search by name, city/place of birth  
     (+)   5-7 authors are enough to complete the task successfully. You can take more, if you have enough time and willingness  
 +  Page of an author with  
@@ -54,12 +69,12 @@ Extra scope:
 - [x]  **10**  Confidence of the project presentation;
 - [x]  **30**  Project is made using gatsbyjs;
 - [x]  **20**  contentful / ~~netlify cms~~ is used for content management
-- [x]  **10**  Portal has third language;
+- [x]  **10**  Portal has third language;  
 ***total 70***   
 
 -   ~~**-100**  if there are less than 5 commits from each active team member. Everyone should merge their own PRs.~~
 -   ~~up to  **-50**  points for violations  [stage2-tasks-requirements]~~
 -   ~~**-40**  if there is no worklog for team~~
--   ~~**-20**  too primitive (ugly for 2019) design / UX~~~
+-   ~~**-20**  too primitive (ugly for 2019) design / UX~~
 
 #### Total score 240
