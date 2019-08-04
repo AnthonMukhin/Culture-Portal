@@ -18,7 +18,7 @@ export default dataWriter => {
   };
   return (
     <>
-      <h3>{t("title")}:</h3>
+      <h3 style={{textAlign: 'center'}}>{t("title")}:</h3>
       <div className="card mb-3 col-12 ml-auto mr-auto">
         <div className="row no-gutters" style={{height: '100%'}}>
           <div className="image-container col-xl-5 row align-items-start justify-content-center">
