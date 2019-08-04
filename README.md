@@ -1,4 +1,4 @@
-# Rolling SSchool - CodeJam-Culture-Portal
+# The Rolling Scopes School — CodeJam-Culture-Portal 2019
 ### Group №32:
 
 |                |                               |github                       |
