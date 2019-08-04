@@ -27,7 +27,7 @@ export default ({children}) => {
         {children}
       </main>
       <footer>
-        <p>The Rolling Scopes School - CodeJam-Culture-Portal 2019</p>
+        <p>The Rolling Scopes School — CodeJam-Culture-Portal 2019</p>
       </footer>
     </>
   );

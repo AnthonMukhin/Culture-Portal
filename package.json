@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "code-jam-culture-portal",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "The Rolling Scopes School Task",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
