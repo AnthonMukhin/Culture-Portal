@@ -56,22 +56,23 @@ export default ({ data }) => {
   const writersForPage = writersList.map((author) => {
     const nameForUrl = author.name.en.replace(/\s/g, '')
     return (
-      <li key={author.id}>
-        <Link
-          to={`/writer/${nameForUrl}`}>
-          <img src={author.avatar.file.url} alt="writersAvatar" />
-        </Link>
-        <Link
-          to={`/writer/${nameForUrl}`}>
-          <h3>{author.name[currentLang]}</h3>
-        </Link>
-        <p>{author.summary[currentLang]}</p>
-        <p>{t('born')} {author.placeOfBirth[currentLang]}</p>
-        <Link
-          to={`/writer/${nameForUrl}`}>
-          <p>{t('further')}</p>
-        </Link>
-      </li>
+      <div className="card mb-3 col-xl-5 col-lg-10 col-11" key={author.id}>
+        <div className="row no-gutters" style={{height: '100%'}}>
+          <div className="col-md-4 row align-items-center m-auto">
+            <img className="card-img" src={author.avatar.file.url} alt="writersAvatar"/>
+          </div>
+          <div className="col-md-8">
+            <div className="card-body" style={{height: '100%'}}>
+              <h5 className="card-title">{author.name[currentLang]}</h5>
+              <p className="card-text"><small className="text-muted">{t('born')} {author.placeOfBirth[currentLang]}</small></p>
+              <p className="card-text">{author.summary[currentLang]}</p>
+              <Link to={`/writer/${nameForUrl}`} className="card-text" style={{margin: '0 auto', width: '100%'}}>
+              <button className="btn btn-info">{t('further')}</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     )
   });
   return (
@@ -84,7 +85,7 @@ export default ({ data }) => {
         onChange={searchWriter}
       />
     </div>
-      <ul>{writersForPage}</ul>
+      <div className="row justify-content-around m-0 p-0">{writersForPage}</div>
     </Layout>
   );
 };
