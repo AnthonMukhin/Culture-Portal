@@ -10,6 +10,7 @@ import WriterOfTheDay from "../components/writerOfTheDay/writerOfTheDay";
 export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
   const teamUnit = data.allContentfulTeam.nodes;
+  console.log(new Date());
   const {t} = useTranslation("descriptionPortal");
 
   const daysWriterNumber = () => {
