@@ -17,7 +17,7 @@ export default () => {
   }
 
   return (
-    <div className='col-3 row justify-content-center p-0'>
+    <div className='col-md-3 col-2 row justify-content-center p-0 m-0'>
       <select className='btn btn-secondary' onChange={handleOnChange} value={i18n.language}>
         {options}
       </select>

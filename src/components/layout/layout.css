@@ -33,3 +33,9 @@ h1 {
     font-size: 20px !important;
   }
 }
+
+@media (max-width: 768px) {
+  footer > p {
+    display: none;
+  }
+}
