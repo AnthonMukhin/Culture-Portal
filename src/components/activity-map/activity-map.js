@@ -14,7 +14,7 @@ export default ({ coords }) => {
 
   return (
     <section>
-      <h3>{t('title')}</h3>
+      <h3 style={{textAlign: 'center'}}>{t('title')}</h3>
       <YMaps>
         <Map  
           defaultState={mapData}
