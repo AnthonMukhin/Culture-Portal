@@ -6,6 +6,10 @@
     "main": "Main",
     "writers": "Writers"
   },
+  "team": {
+    "title": "Team of developers"
+  },
+
   "map": {
     "title": "Place of primary activity"
   },
@@ -14,6 +18,22 @@
     "close": "Close"
   },
   "writers": {
-    "searchPlaceholder": "Search by writers name or palce of birth..."
-  }
+    "searchPlaceholder": "Search by writers name or palce of birth...",
+    "born": "Was born:",
+    "further": "read more..."
+  },
+  "biography": {
+    "title": "Biography"
+  },
+  "works": {
+    "title": "Works list"
+  },
+  "writerOfTheDay": {
+    "title": "Writer of the day",
+    "button": "More details"
+  },
+  "descriptionPortal": {
+    "text": "On the site you will find Belarusian writers with their biographies, painted by year in a convenient visual format, a list of the most famous works and the year of their writing, public photos, documentaries , as well as the places creative activities."
+}
+
 }
