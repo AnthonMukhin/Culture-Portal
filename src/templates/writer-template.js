@@ -17,7 +17,8 @@ const WriterTemplate = (props) => {
       <Gallery photos={writer.photoGallery} author={writer}></Gallery>
       {works(writer.listOfArtistsWorks)}
       {video(writer.videoLink)}
-      <ActivityMap coords={writer.placeOfActivity}></ActivityMap>
+      {writer.placeOfActivity && 
+        <ActivityMap coords={writer.placeOfActivity}></ActivityMap>}
     </Layout>
   );
 }
