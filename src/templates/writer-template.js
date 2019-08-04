@@ -11,7 +11,8 @@ const WriterTemplate = (props) => {
   return (
     <Layout>
       {video(writer.videoLink)}
-      <ActivityMap coords={writer.placeOfActivity}></ActivityMap>
+      {writer.placeOfActivity && 
+        <ActivityMap coords={writer.placeOfActivity}></ActivityMap>}
     </Layout>
   );
 }

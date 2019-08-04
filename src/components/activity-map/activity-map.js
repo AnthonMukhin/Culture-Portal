@@ -11,7 +11,10 @@ export default ({ coords }) => {
   };
   
   const coordinates = [coords.lat, coords.lon];
-
+  const styles = {
+    width: 'auto',
+    height: '240px'
+  };
   return (
     <section>
       <h3>{t('title')}</h3>
