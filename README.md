@@ -4,9 +4,9 @@
 |                |                               |github                       |
 |----------------|-------------------------------|-----------------------------|
 |Viachaslau      |Tkachou                        |prakdown                     |
-|Anton           |Mukhin                         |anthonmukhin                 |
+|Anton           |Mukhin                         |anthonmukhin / lovcach       |
 |Yaroslav        |Barkovskiy                     |barikq                       |
-|Illia           |Dzemchanka                     |hellsingi                    |
+|Illia           |Dzemchanka                     |hellsingi / psycology2019    |
 |Yauhen          |Kviatkouski                    |yauhenkviatkouski            |
 |Alena           |Shkradziuk                     |alenashkr                    |
 
