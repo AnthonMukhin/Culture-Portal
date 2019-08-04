@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import { useTranslation } from 'react-i18next';
 import '../utils/i18next';
 import Layout from "../components/layout/layout";
+import '../styles/writers.css';
 
 export const queryWriters = graphql`
 query WritersList {
@@ -54,19 +55,29 @@ export default ({ data }) => {
   }
 
   const writersForPage = writersList.map((author) => {
-    const nameForUrl = author.name.en.replace(/\s/g, '')
+    const nameForUrl = author.name.en.replace(/\s/g, '');
+    const divStyle={
+      backgroundImage: `url(${author.avatar.file.url})`
+    };
+    let summary = null;
+    if (author.summary[currentLang].length > 220) {
+      summary = author.summary[currentLang].substr(0, 220) + ' . . .';
+    } else summary = author.summary[currentLang];
+
     return (
-      <div className="card mb-3 col-xl-5 col-lg-10 col-11" key={author.id}>
+      <div className="card mb-3 col-xl-6 col-lg-12 col-md-12 col-11" key={author.id}>
         <div className="row no-gutters" style={{height: '100%'}}>
-          <div className="col-md-4 row align-items-center m-auto">
-            <img className="card-img" src={author.avatar.file.url} alt="writersAvatar"/>
+          <div className="image-container col-xl-5 row align-items-start justify-content-center">
+            <div className="card-img" style={divStyle}>
+              <img src={author.avatar.file.url} alt="writersAvatar"/>
+            </div>
           </div>
-          <div className="col-md-8">
-            <div className="card-body" style={{height: '100%'}}>
+          <div className="col-xl-7">
+            <div className="card-body d-flex align-items-start" style={{height: '100%'}}>
               <h5 className="card-title">{author.name[currentLang]}</h5>
               <p className="card-text"><small className="text-muted">{t('born')} {author.placeOfBirth[currentLang]}</small></p>
-              <p className="card-text">{author.summary[currentLang]}</p>
-              <Link to={`/writer/${nameForUrl}`} className="card-text" style={{margin: '0 auto', width: '100%'}}>
+              <p className="card-text">{summary}</p>
+              <Link to={`/writer/${nameForUrl}`} className="card-text button-container align-self-end" style={{margin: '0 auto', width: '100%'}}>
               <button className="btn btn-info">{t('further')}</button>
               </Link>
             </div>
@@ -85,7 +96,7 @@ export default ({ data }) => {
         onChange={searchWriter}
       />
     </div>
-      <div className="row justify-content-around m-0 p-0">{writersForPage}</div>
+      <div className="row writers-list justify-content-around m-0">{writersForPage}</div>
     </Layout>
   );
 };
