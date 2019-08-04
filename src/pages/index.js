@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';                 
+import { graphql } from 'gatsby';
 
 import Team from '../components/team/Team';
 import Layout from '../components/layout/layout';
@@ -23,7 +23,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="container">
-        <p className="alert alert-info" style={{fontSize: '24px', marginTop: '15px'}}>{t("text")}:</p>
+        <p className="alert alert-info" style={{fontSize: '24px', marginTop: '15px'}}>{t("text")}</p>
       </div>
       <div className="container">
       {WriterOfTheDay(authorsArraySummary[daysWriterNumber()])}
