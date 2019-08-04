@@ -103,19 +103,20 @@ export default class Carousel extends React.Component {
         <AliceCarousel
           items={this.state.pictures}
           slideToIndex={currentIndex}
+          buttonsDisabled={true}
           onSlideChanged={this.onSlideChanged}
           mouseDragEnabled
           duration={400}
         />
 
-        {/* <div class="buttons-container">
+        <div class="buttons-container">
           <button class="slider-button" onClick={() => this.slidePrev()}>
             ←
           </button>
           <button class="slider-button" onClick={() => this.slideNext()}>
             →
           </button>
-        </div> */}
+        </div>
 
         <div className="gallery-items row">
           {this.state.pictures.map(this.thumbItem)}

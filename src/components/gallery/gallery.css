@@ -52,11 +52,13 @@
 .slider-button {
   margin: 15px;
   border: none;
+  font-size: 22px;
+  line-height: 25px;
   border-radius: 10rem;
-  padding: 10px 30px;
+  padding: 0px 30px;
   color: white;
   cursor: pointer;
-  background: linear-gradient(to right bottom, #9198e5, #e66465);
+  background: linear-gradient(to bottom, #046a75, #9198e5);
 }
 
 .alice-carousel__dots-item {
