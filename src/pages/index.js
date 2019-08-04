@@ -23,7 +23,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="container">
-        <p>{t("text")}:</p>
+        <p className="alert alert-info" style={{fontSize: '24px', marginTop: '15px'}}>{t("text")}:</p>
       </div>
       <div className="container">
       {WriterOfTheDay(authorsArraySummary[daysWriterNumber()])}

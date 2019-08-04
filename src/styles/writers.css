@@ -34,10 +34,6 @@
   padding-right: 10px;
   padding-left: 10px;
 }
-/* .card-text:nth-child(3) {
-  height: 168px;
-  overflow: hidden;
-} */
 
 @media (max-width: 768px) {
   .no-gutters {

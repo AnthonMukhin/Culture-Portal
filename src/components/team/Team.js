@@ -14,7 +14,7 @@ export default data => {
   const dataTeam = data;
   return (
     <>
-    <h3>{t("title")}</h3>
+    <h3 style={{textAlign: 'center'}}>{t("title")}</h3>
     <section className="team-container">
 
       {dataTeam.map(item => (
@@ -31,8 +31,8 @@ export default data => {
             <p key={uniqid()}>{item.name[currentLanguage]}</p>
             <a
             key={uniqid()}
-            href={item.githubLink}>GitHub</a>
-            <p key={uniqid()}>{item.contribution[currentLanguage]}</p>
+            href={item.githubLink}><button className="btn btn-secondary">GitHub</button></a>
+            <p style={{overflow: 'hidden'}}key={uniqid()}>{item.contribution[currentLanguage]}</p>
           </div>
         </Fragment>
       ))}
