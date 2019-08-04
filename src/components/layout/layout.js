@@ -80,7 +80,7 @@ export default ({children}) => {
   return (
     <>
       <Helmet>
-        <title>Писатели</title>
+        <title>{t('header')}</title>
       </Helmet>
       <header className='row justify-content-around align-items-center'>
         <h1 className='col-md-3 col-11'>{t('title')}</h1>
