@@ -88,14 +88,14 @@ export default ({ data }) => {
   });
   return (
     <Layout>
-      <div className="searchbar form-group">
       <input
+        className='form-control col-xl-4 col-md-5 col-9'
         size="43"
         type="text"
         placeholder={t('searchPlaceholder')}
         onChange={searchWriter}
+        style={{margin: '10px auto'}}
       />
-    </div>
       <div className="row writers-list justify-content-around m-0">{writersForPage}</div>
     </Layout>
   );
