@@ -1,11 +1,11 @@
-import React from "react";
-import { graphql } from 'gatsby';
+import React from 'react';
+import { graphql } from 'gatsby';                 
 
-import Team from "../components/team/Team"
-import Layout from "../components/layout/layout";
+import Team from '../components/team/Team';
+import Layout from '../components/layout/layout';
 import { useTranslation } from 'react-i18next';
 import '../utils/i18next';
-import WriterOfTheDay from "../components/writerOfTheDay/writerOfTheDay";
+import WriterOfTheDay from '../components/writerOfTheDay/writerOfTheDay';
 
 export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
@@ -75,5 +75,5 @@ query MyQuery {
     }
   }
 }
-`
+`;
 
