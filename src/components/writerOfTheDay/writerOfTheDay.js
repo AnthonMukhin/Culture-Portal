@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import '../../utils/i18next';
 
 import '../../styles/bootstrap.min.css';
-import './writerOfTheDay.css';
+import '../../styles/writers.css';
 
 export default dataWriter => {
   const { i18n } = useTranslation();
@@ -19,7 +19,7 @@ export default dataWriter => {
   return (
     <>
       <h3>{t("title")}:</h3>
-      <div className="card mb-3 col-11">
+      <div className="card mb-3 col-12 ml-auto mr-auto">
         <div className="row no-gutters" style={{height: '100%'}}>
           <div className="image-container col-xl-5 row align-items-start justify-content-center">
             <div className="card-img" style={divStyle}>
