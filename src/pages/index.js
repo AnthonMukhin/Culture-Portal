@@ -10,26 +10,28 @@ import WriterOfTheDay from '../components/writerOfTheDay/writerOfTheDay';
 export default ({ data }) => {
   const authorsArraySummary = data.allContentfulAuthor.nodes;
   const teamUnit = data.allContentfulTeam.nodes;
-  const {t} = useTranslation("descriptionPortal");
+  const { t } = useTranslation("descriptionPortal");
 
   const daysWriterNumber = () => {
-    const msInDay = 86400000;
-    const msInMinute = 60000;
-    const dayNumber = Math.floor((new Date().getTime() - new Date().getTimezoneOffset() * msInMinute) / msInDay);
-    const authorsNumber = dayNumber - Math.floor(dayNumber / authorsArraySummary.length) * authorsArraySummary.length;
-    return authorsNumber;
-    }
+    // const msInDay = 86400000;
+    // const msInMinute = 60000;
+    // const dayNumber = Math.floor((new Date().getTime() - new Date().getTimezoneOffset() * msInMinute) / msInDay);
+    // const authorsNumber = dayNumber - Math.floor(dayNumber / authorsArraySummary.length) * authorsArraySummary.length;
+    // return authorsNumber;
+
+    return 0;
+  }
 
   return (
     <Layout>
       <div className="container">
-        <p className="alert alert-info" style={{fontSize: '24px', marginTop: '15px'}}>{t("text")}</p>
+        <p className="alert alert-info" style={{ fontSize: '24px', marginTop: '15px' }}>{t("text")}</p>
       </div>
       <div className="container">
-      {WriterOfTheDay(authorsArraySummary[daysWriterNumber()])}
+        {WriterOfTheDay(authorsArraySummary[daysWriterNumber()])}
       </div>
       <div className="container">
-      {Team(teamUnit)}
+        {Team(teamUnit)}
       </div>
     </Layout>
   );
